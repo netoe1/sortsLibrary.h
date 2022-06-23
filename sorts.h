@@ -8,7 +8,7 @@ unsigned int n;
 float segundos[6];
 
 void defineN(); /*FUNÇÃO QUE DEFINE O TAMANHO DO VETOR!*/
-float calculaMedia(); /*A MÉDIA CALCULADA É ENTRE TODOS OS TEMPOS, 
+float calculaMedia_todos(); /*A MÉDIA CALCULADA É ENTRE TODOS OS TEMPOS, 
                         USAR APENAS SE FOREM EXECUTADOS TODOS OS 
                         ALGORITMOS DE BUSCA!*/
 void resetaSegundos();
@@ -32,7 +32,7 @@ void defineN(const unsigned int x){
     n = x;
 }
 
-float calculaMedia(){
+float calculaMedia_todos(){
     float aux = 0.0;
 
     for(int i = 0; i < 6;i++){
@@ -81,8 +81,7 @@ void start_bubble(){
     
 	// Fim												
 	
-	
-	printf("O tempo de execucao foi: %.3f segundos.",tempo);
+	printf("\n\nBUBBLE SORT:O tempo de execucao foi: %.3f segundos.\n\n",tempo);
 	free(vetor);
 
     segundos[0] += tempo;
@@ -117,7 +116,7 @@ void start_selection(){
              
 	// Fim
 	
-	printf("O tempo de execucao foi: %.3f segundos.",tempo);
+	printf("\n\nSELECTION SORT:O tempo de execucao foi: %.3f segundos.\n\n",tempo);
 	
 	free(vetor);
     segundos[1] = tempo;
@@ -158,7 +157,7 @@ void start_inserction(){
             
 	// Fim
 	
-	printf("O tempo de execucao foi: %.3f segundos.",tempo);
+	printf("\n\nINSERCTION SORT:O tempo de execucao foi: %.3f segundos.\n\n",tempo);
 	free(vetor);
 
     segundos[2] = tempo;
@@ -229,7 +228,7 @@ void start_merge(){
     tempo = (tfim - tinicio);		
     
 	// Fim										
-	printf("O tempo de execucao foi: %.3f segundos.",tempo);
+	printf("\nMERGE SORT:O tempo de execucao foi: %.3f segundos.",tempo);
 	free(vetor);
     segundos[3] = tempo;
 }
@@ -290,7 +289,7 @@ void start_quick(){
     
    	printf ("}\n\n");
 	
-	printf("O tempo de execucao foi: %.3f segundos.",tempo);
+	printf("\n\nQUICK SORT:O tempo de execucao foi: %.3f segundos.\n\n",tempo);
 	free(vetor);
 
     segundos[4] = tempo;
@@ -336,14 +335,6 @@ void start_heap(){
 	srand(time(NULL));  //função para gerar sempre números aleatórios diferentes.
 	for (i = 0; i < n; i++)		//preenche o vetor com valores aleatórios
 		   vetor[i] = rand()%100;
-		   
-	/*printf ("** Vetor original ***\n\n{ ");
-	
-	for(i=0; i<n; i++)
-       printf ("%d  ", vetor[i]);
-    
-   	printf ("}\n\n");
-   	*/
     tinicio = time(NULL);  	
     
     heapsort(vetor, n);
@@ -353,14 +344,7 @@ void start_heap(){
     
 	// Fim												
 	
-	/*printf ("\n\n** Vetor ordenado ***\n\n{ ");
-	
-	for(i=0; i<n; i++)
-       printf ("%d ", vetor[i]);
-    
-   	printf ("}\n\n");
-	*/
-	printf("O tempo de execucao foi: %.3f segundos.",tempo);
+	printf("\n\nHEAP SORT:O tempo de execucao foi: %.3f segundos.\n\n",tempo);
 	free(vetor);
 
     segundos[5] = tempo;

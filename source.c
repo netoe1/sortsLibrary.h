@@ -4,7 +4,6 @@
 int main()
 {
     resetaSegundos();
-    defineN(1000000);
+    defineN(50000);
     start_bubble();
-    printf("Segundos->bubble:%f",segundos[0]);
 }
