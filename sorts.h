@@ -8,9 +8,8 @@ unsigned int n;
 float segundos[6];
 
 void defineN(); /*FUNÇÃO QUE DEFINE O TAMANHO DO VETOR!*/
-float calculaMedia_todos(); /*A MÉDIA CALCULADA É ENTRE TODOS OS TEMPOS, 
-                        USAR APENAS SE FOREM EXECUTADOS TODOS OS 
-                        ALGORITMOS DE BUSCA!*/
+float calculaMedia_todos(); /*A MÉDIA CALCULADA É ENTRE OS 6 ALGORITMOS, 
+                        USAR APENAS SE FOREM EXECUTADOS TODOS!*/
 void resetaSegundos();
 void start_bubble();
 void start_selection();
