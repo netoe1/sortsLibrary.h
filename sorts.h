@@ -81,13 +81,6 @@ void start_bubble(){
     
 	// Fim												
 	
-	printf ("\n\n** Vetor ordenado ***\n\n{ ");
-	
-	for(i=0; i<n; i++)
-       printf ("%d ", vetor[i]);
-    
-   	printf ("}\n\n");
-	
 	
 	printf("O tempo de execucao foi: %.3f segundos.",tempo);
 	free(vetor);
