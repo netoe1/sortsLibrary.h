@@ -266,12 +266,6 @@ void start_quick(){
 	for (i = 0; i < n; i++)		//preenche o vetor com valores aleatórios
 		   vetor[i] = rand()%100;
 		   
-	printf ("** Vetor original ***\n\n{ ");
-	
-	for(i=0; i<n; i++)
-       printf ("%d  ", vetor[i]);
-    
-   	printf ("}\n\n");
    	
     tinicio = time(NULL);  	
     
@@ -281,13 +275,6 @@ void start_quick(){
     tempo = (tfim - tinicio);		
     
 	// Fim												
-	
-	printf ("\n\n** Vetor ordenado ***\n\n{ ");
-	
-	for(i=0; i<n; i++)
-       printf ("%d ", vetor[i]);
-    
-   	printf ("}\n\n");
 	
 	printf("\n\nQUICK SORT:O tempo de execucao foi: %.3f segundos.\n\n",tempo);
 	free(vetor);
