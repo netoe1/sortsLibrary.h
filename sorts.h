@@ -5,24 +5,47 @@
 
 unsigned int n;
 
-
 float segundos[6];
 
-void defineN();
+void defineN(); /*FUNÇÃO QUE DEFINE O TAMANHO DO VETOR!*/
+float calculaMedia(); /*A MÉDIA CALCULADA É ENTRE TODOS OS TEMPOS, 
+                        USAR APENAS SE FOREM EXECUTADOS TODOS OS 
+                        ALGORITMOS DE BUSCA!*/
+void resetaSegundos();
 void start_bubble();
 void start_selection();
 void start_inserction();
 void start_merge();
 void start_quick();
 void start_heap();
+/*END -- PRE*/
 
+/*SUB-FUNÇÕES*/
 void merge(int vetor[], int comeco, int meio, int fim);
 void mergeSort(int vetor[], int comeco, int fim);
 void quickSort(int b[],int i, int s);
 void heapsort(int vetor[], int tam);
 
+/*END ---*/
+
 void defineN(const unsigned int x){
     n = x;
+}
+
+float calculaMedia(){
+    float aux = 0.0;
+
+    for(int i = 0; i < 6;i++){
+        aux += segundos[i];
+    }
+
+    return aux;
+}
+
+void resetaSegundos(){
+    for(int i = 0; i < 6;i++){
+        segundos[i] = 0.0;
+    }
 }
 
 void start_bubble(){
@@ -349,3 +372,6 @@ void start_heap(){
 
     segundos[5] = tempo;
 }
+
+
+
