@@ -80,7 +80,7 @@ void start_bubble(){
     
 	// Fim												
 	
-	printf("\n\nBUBBLE SORT:O tempo de execucao foi: %.3f segundos.\n\n",tempo);
+	printf("\n\nBUBBLE SORT:O tempo de execucao foi: %.6f segundos.\n\n",tempo);
 	free(vetor);
 
     segundos[0] += tempo;
@@ -115,7 +115,7 @@ void start_selection(){
              
 	// Fim
 	
-	printf("\n\nSELECTION SORT:O tempo de execucao foi: %.3f segundos.\n\n",tempo);
+	printf("\n\nSELECTION SORT:O tempo de execucao foi: %.6f segundos.\n\n",tempo);
 	
 	free(vetor);
     segundos[1] = tempo;
@@ -156,7 +156,7 @@ void start_inserction(){
             
 	// Fim
 	
-	printf("\n\nINSERCTION SORT:O tempo de execucao foi: %.3f segundos.\n\n",tempo);
+	printf("\n\nINSERCTION SORT:O tempo de execucao foi: %.6f segundos.\n\n",tempo);
 	free(vetor);
 
     segundos[2] = tempo;
@@ -227,7 +227,7 @@ void start_merge(){
     tempo = (tfim - tinicio);		
     
 	// Fim										
-	printf("\nMERGE SORT:O tempo de execucao foi: %.3f segundos.",tempo);
+	printf("\nMERGE SORT:O tempo de execucao foi: %.6f segundos.",tempo);
 	free(vetor);
     segundos[3] = tempo;
 }
@@ -275,7 +275,7 @@ void start_quick(){
     
 	// Fim												
 	
-	printf("\n\nQUICK SORT:O tempo de execucao foi: %.3f segundos.\n\n",tempo);
+	printf("\n\nQUICK SORT:O tempo de execucao foi: %.6f segundos.\n\n",tempo);
 	free(vetor);
 
     segundos[4] = tempo;
@@ -330,7 +330,7 @@ void start_heap(){
     
 	// Fim												
 	
-	printf("\n\nHEAP SORT:O tempo de execucao foi: %.3f segundos.\n\n",tempo);
+	printf("\n\nHEAP SORT:O tempo de execucao foi: %.6f segundos.\n\n",tempo);
 	free(vetor);
 
     segundos[5] = tempo;
